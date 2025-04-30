@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris en JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="sidebar left">
+            <h2>Tetris</h2>
+            <h3>Règles du jeu</h3>
+            <ul>
+                <li>Faites tomber les pièces pour compléter des lignes.</li>
+                <li>Chaque ligne complétée disparaît et augmente votre score.</li>
+                <li>Game over si la grille est pleine.</li>
+                <li><strong>Contrôles :</strong>
+                    <ul>
+                        <li><kbd>←</kbd> : Gauche</li>
+                        <li><kbd>→</kbd> : Droite</li>
+                        <li><kbd>↓</kbd> : Descendre</li>
+                        <li><kbd>↑</kbd> : Rotater</li>
+                        <li><kbd>Espace</kbd> : Tomber</li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="startButton">Commencer</button>
+        </div>
+        <canvas id="tetrisCanvas" width="240" height="400"></canvas>
+        <div class="sidebar right">
+            <h3>Prochaine pièce</h3>
+            <canvas id="nextPieceCanvas" width="100" height="100"></canvas>
+        </div>
+    </div>
+    <div id="gameOverScreen" class="game-over">
+        <h2>Game Over</h2>
+        <p id="finalScore">Score : 0</p>
+        <button id="restartButton">Recommencer</button>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
